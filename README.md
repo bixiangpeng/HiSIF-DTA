@@ -26,15 +26,15 @@ biopython == 1.79
   
     1) For DTA task
     
-      python train.py --model{0 for BU_model or 1 for TD_model } --dataset{davis or kiba}
+      python train.py --model{0 for BUNet or 1 for TDNet } --dataset{davis or kiba}
       
     2) For CPI task
     
-      python train_for_CPI.py --model{0 for BU_model or 1 for TD_model } --dataset{Human}
+      python train_for_CPI.py --model{0 for BUNet or 1 for TDNet } --dataset{Human}
 
   2.Test
   
-    python test.py --model{0 for BU_model or 1 for TD_model } --dataset{davis or kiba}
+    python test.py --model{0 for BUNet or 1 for TDNet } --dataset{davis or kiba}
   
  
 # Contact
