@@ -14,6 +14,13 @@ autograd == 1.4
 autograd-gamma == 0.5.0
 
 biopython == 1.79
+
+## Data Preparation
+
+1. Pre-trained models and relevant results can be available at the [Link](https://pan.baidu.com/s/1kejvhktBZ6e0QcmbYWus5w?pwd=er8j).
+
+2. The relevant data files can be available at the [Link](https://pan.baidu.com/s/1YC2n9G2oldSATik5fxLUDg?pwd=8dgu).
+   
 ## Run
   1.Train
   
