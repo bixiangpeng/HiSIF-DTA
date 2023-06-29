@@ -1,7 +1,7 @@
 # HiSIF-DTA
 Code and Dataset for "HiSIF-DTA: A Universal Hierarchical Semantic Information Fusion Framework for Drug-Target Affinity Prediction".
 # Framework
-![HiSIF-DTA architecture](https://github.com/gu-yaowen/REDDA/blob/main/model_structure.png)
+![HiSIF-DTA architecture](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/Framework.png)
 ## Requirement
 Pytorch == 1.8.0
 
