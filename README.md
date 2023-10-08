@@ -114,7 +114,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
               │   └── (XXXXX).npy
               ├── PPI
               │   └── ppi_data.pkl                   
-              ├── human_dict.txt
+              ├── Human_dict.txt
               ├── train(fold).csv                   - 5-fold training set data in CSV format (processed)
               ├── test(fold).csv                    - 5-fold test set data in CSV format (processed)
               ├── mol_data.pkl
@@ -122,8 +122,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
       ```
    2. __Customize your data__
 
-      You might like to test the model on more DTA or CPI datasets. If this is the case, please add the data in the folder 'data' and process them to be suitable for our model. We provide 
-      a detailed processing script for converting original data to the input data that our model needed, i.e., `create_data.py`. The processing steps are as follows:
+      You might like to test the model on more DTA or CPI datasets. If this is the case, please add your data in the folder 'data' and process them to be suitable for our model. We provide a detailed processing script for converting original data to the input data that our model needed, i.e., `create_data.py`. The processing steps are as follows:
      
       1. Split the raw dataset into training and test sets, and convert them into CSV format respectively（i.e., `train.csv` and `test.csv`）.
          The content of the csv file can be organized as follows:
@@ -138,20 +137,17 @@ In this framework, a hierarchical protein graph is constructed that includes not
          >MKKFFDSRREQGGSGLGSGSSGGGGSTSGLGSGYIGRVFGIGRQQVTVDEVLAEGGFAIVFLVRTSNGMKCALKRMFVNNEHDLQVCKREIQIMRDLSGHKNIVGYIDSSINNVSSGDVWEVLILM...	Q2M2I8
          >PFWKILNPLLERGTYYYFMGQQPGKVLGDQRRPSLPALHFIKGAGKKESSRHGGPHCNVFVEHEALQRPVASDFEPQGLSEAARWNSKENLLAGPSENDPNLFVALYDFVASGDNTLSITKGEKLR...	P00519
          ```
-      3. Download the corresponding protein structure file from the PDB（https://www.rcsb.org/） or Alphafold2(https://alphafold.com/) DB according to the Uniprot ID. Then you can get the 
-         contact map file by runing the following scripts:
+      3. Download the corresponding protein structure file from the PDB（https://www.rcsb.org/） or Alphafold2(https://alphafold.com/) DB according to the Uniprot ID. Then you can get the contact map file by runing the following scripts:
          ```python
          python generate_contact_map.py --input_path '...data/your_dataset_name/your_pdb_dir/'  --output_path '...data/your_dataset_name/your_contact_map_dir/'  --chain_id 'A'
-         ```
-          
+         ``` 
       4. Construct the graph data for drugs and proteins. Assume that you already have aboving files (1.2.3) in your `data/your_dataset_name/` folder, you can simply run following scripts:
          ```python
          python created_data.py --path '..data/'  --dataset 'your_dataset_name'  --output_path '..data/'
          ```
-      5. Finally, Upload the Uniprot IDs of all proteins in your dataset to the String DB(https://string-db.org/) for PPI networks data, and the feature descriptor of protein in PPI 
-         network we used can be available from Interpro (https://www.ebi.ac.uk/interpro/).
+      5. Finally, Upload the Uniprot IDs of all proteins in your dataset to the String DB(https://string-db.org/) for PPI networks data, and the feature descriptor of protein in PPI network we used can be available from Interpro (https://www.ebi.ac.uk/interpro/).
       
-   :bulb: Note that the above is just a description of the general steps, and you may need to fine-tune the original script for different datasets.
+   :bulb: Note that the above is just a description of the general steps, and you may need to make some modification to the original script for different datasets.
      
    :blush: Therefore，We have provided detailed comments on the functionality of each function in the script, hoping that it could be helpful for you.
 
@@ -159,11 +155,11 @@ In this framework, a hierarchical protein graph is constructed that includes not
   After processing the data, you can retrain the model from scratch with the following command:
   ```text
   
-  python train_for_DTA.py --model TDNet --epochs 2000 --batch 512 --LR 0.0005 --log_interval 20 --device 0 --dataset davis --num_workers 6 
+  python training_for_DTA.py --model TDNet --epochs 2000 --batch 512 --LR 0.0005 --log_interval 20 --device 0 --dataset davis --num_workers 6 
   or
-  python train_for_CPI.py --model BUNet --epochs 2000 --batch 512 --LR 0.0005 --log_interval 20 --device 0 --dataset kiba --num_workers 6 
+  python training_for_CPI.py --model BUNet --epochs 2000 --batch 512 --LR 0.0005 --log_interval 20 --device 0 --dataset kiba --num_workers 6 
   ```
-   Here is the detailed introduction of the optional parameters when running `train_for_DTA/CPI.py`:
+   Here is the detailed introduction of the optional parameters when running `training_for_DTA/CPI.py`:
      ```text
       --model: The model name, specifying the name of the model to be used.There are two optional backbones, BUNet and TDNet.
       --epochs: The number of epochs, specifying the number of iterations for training the model on the entire dataset.
@@ -175,12 +171,12 @@ In this framework, a hierarchical protein graph is constructed that includes not
       --num_workers: This parameter is an optional value in the Dataloader, and when its value is greater than 0, it enables 
        multiprocessing for data processing.
    ```
-   :bulb: Considering that most baseline models employ five-fold cross-validation on the Human dataset, in order to ensure a fair comparison with them, we have provided an additional training file (`train_for_CPI.py`) specifically for conducting five-fold cross-validation on the Human dataset.
+   :bulb: We provided an additional training file (`training_for_CPI.py`) specifically for conducting five-fold cross-training on the Human dataset.
   
-   :bulb: Additionally, due to the larger scale of proteins in the Human dataset, we have made modifications to the original backbone by introducing serialization to alleviate the memory requirements. For detailed changes, please refer to the file  `HGCN_for_CPI.py`.
+   :bulb: Additionally, due to the larger scale of proteins in the Human dataset, we have made modifications to the original architecture to alleviate the memory requirements. For detailed changes, please refer to the file  `HGCN_for_CPI.py`.
 
 * ### Predicting
-   If you don't want to retrain the model, we provide pre-trained model parameters as shown below. You can download these model parameter files and place them in the "results/dataset_name/" directory.
+   If you don't want to re-train the model, we provide pre-trained model parameters as shown below. You can download these model parameter files and place them in the "results/dataset_name/" directory.
 <a name="pretrained-models"></a>
 
    | Datasets | Pre-trained models          | Description |
@@ -191,15 +187,15 @@ In this framework, a hierarchical protein graph is constructed that includes not
   
    After that, you can perform DTA predictions by running the following command:
    ```text 
-   python testing_for_DTA.py --model TDNet --dataset davis  or
-   python testing_for_CPI.py --model BUNet --dataset Human
+   python test_for_DTA.py --model TDNet --dataset davis  or
+   python test_for_CPI.py --model BUNet --dataset Human
    ```
    :bulb: Please note that before making predictions, in addition to placing the pre-trained model parameter files in the correct location, it is also necessary to place the required data files mentioned in the previous section in the appropriate location.
 ## Results
 ---
 * ### Experimental results
 
-  We have designed a protein semantic information fusion framework based on the concept of hierarchical graph to enhance the richness of protein representation. Meanwhile, we propose two different mechanisms for semantic information fusion (Top-Down and Bottom-Up) and evaluate their performance on different datasets. The performance of two different backbones on different datasets is as follows:
+  We have designed a protein semantic information fusion framework based on the concept of hierarchical graph to enhance the richness of protein representation. Meanwhile, we propose two different strategies for semantic information fusion (_Top-Down_ and _Bottom-Up_) and evaluate their performance on different datasets. The performance of two different strategies on different datasets is as follows:
 
   1. __Performance on the Davis dataset__
      <a name="Experimental results on davis dataset"></a>
@@ -227,7 +223,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
 
    
 * ### Reproduce the results with singal command
-   To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this feature with the following simple command：
+   To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this function with the following simple command：
   ```text
   sudo docker run --name hisif-con --gpus all --shm-size=2g -v /your/local/path/HiSIF-DTA/:/media/HiSIF-DTA -it hisif-image:v1
 
