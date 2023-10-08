@@ -185,7 +185,8 @@ In this framework, a hierarchical protein graph is constructed that includes not
   
    After that, you can perform DTA predictions by running the following command:
    ```text 
-   python predicting.py --model TDNet --dataset davis
+   python testing_for_DTA.py --model TDNet --dataset davis  or
+   python testing_for_CPI.py --model BUNet --dataset Human
    ```
    :bulb: Please note that before making predictions, in addition to placing the pre-trained model parameter files in the correct location, it is also necessary to place the required data files mentioned in the previous section in the appropriate location.
 ## Results
@@ -222,7 +223,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
 * ### Reproduce the results with singal command
    To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this feature with the following simple command：
   ```text
-  sudo docker run --name hisif-con --gpus all -v /media/ST-18T/xiangpeng/HiSIF-DTA/:/media/HiSIF-DTA -it hisif-image:v1
+  sudo docker run --name hisif-con --gpus all --shm-size=2g -v /your/local/path/HiSIF-DTA/:/media/HiSIF-DTA -it hisif-image:v1
 
   # docker run ：Create and start a new container based on the specified image.
   # --name : It specifies the name ("hisif-con") for the container being created. You can use this name to reference and manage the container later.
@@ -233,9 +234,9 @@ In this framework, a hierarchical protein graph is constructed that includes not
   ```
   :bulb: Please note that the above one-click run is only applicable for the inference process and requires you to pre-place all the necessary processed data and pretrained models in the correct locations on your local machine. If you want to train the model in the created Docker container, please follow the instructions below:
    ```text
-   1. sudo docker run --name hisif-con --gpus all --shm-size=16g -v /media/ST-18T/xiangpeng/HiSIF-DTA/:/media/HiSIF-DTA -it hisif-image:v1 /bin/bash
+   1. sudo docker run --name hisif-con --gpus all --shm-size=16g -v /your/local/path/HiSIF-DTA/:/media/HiSIF-DTA -it hisif-image:v1 /bin/bash
    2. cd /media/HiSIF-DTA
-   3. python train_for_DTA.py --dataset davis --model TDNet
+   3. python training_for_DTA.py --dataset davis --model TDNet
    ```
    
 ## Contact
