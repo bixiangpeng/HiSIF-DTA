@@ -80,7 +80,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
           └── experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
    ```
 * ### Data preparation
-      There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
+  There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
 
    1. __Download processed data__
    
