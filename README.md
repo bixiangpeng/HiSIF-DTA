@@ -51,6 +51,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
 ##  Usage
 ---
 * ### Contents page
+
    ```text
        >  HiSIF-DTA
           ├── baselines                       - Baseline models directory. All the baseline models we re-trained can be found in this directory.
@@ -77,7 +78,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
           ├── requirements.txt                - A txt file recording the python packages that model depend on to run.
           ├── Dockerfile                      - A file used to build the environment image via Docker.
           └── experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
-   
+   ```
 * ### Data preparation
       There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
 
