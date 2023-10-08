@@ -78,7 +78,8 @@ In this framework, a hierarchical protein graph is constructed that includes not
           ├── Dockerfile                      - A file used to build the environment image via Docker.
           └── experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
    
-      ```
+      
+   
 * ### Data preparation
       There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
 
