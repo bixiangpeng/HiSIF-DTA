@@ -65,18 +65,19 @@ In this framework, a hierarchical protein graph is constructed that includes not
           │       ├── pretrained_BUNet.model - A file recording the optimal model parameters of BUNet on davis/kiba/Human.
           │       ├── pretrained_TDNet.csv
           │       └── pretrained_TDNet.model
-          ├──generate_contact_map.py         - A Python script used to generate the contact map based on PDB files.
-          ├──create_data.py                  - A python script used to convert original data to the input data that model needed.
-          ├──utils.py                        - A python script recording the various tools needed for training, including dataset classes, gradient solving classes, evaluation metrics, etc.
-          ├──training_for_DTA.py             - A python script used to train the model on DTA dataset (davis or kiba).
-          ├──training_for_CPI.py             - A python script used to train the model on CPI dataset (Human).
-          ├──test_for_DTA.py                 - A python script that reproduces the DTA prediction results using the pre-trained models.
-          ├──test_for_CPI.py                 - A python script that reproduces the CPI prediction results using the pre-trained models.
-          ├──test_for_Ablation.py            - A python script that reproduces the ablation results using the pre-trained models. 
-          ├──grad_pre.py                     - A python script using backpropagation gradients to predict protein binding pockets.
-          ├──requirements.txt                - A txt file recording the python packages that model depend on to run.
-          ├──Dockerfile                      - A file used to build the environment image via Docker.
-          └──experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
+          ├── generate_contact_map.py         - A Python script used to generate the contact map based on PDB files.
+          ├── create_data.py                  - A python script used to convert original data to the input data that model needed.
+          ├── utils.py                        - A python script recording the various tools needed for training.
+          ├── training_for_DTA.py             - A python script used to train the model on DTA dataset (davis or kiba).
+          ├── training_for_CPI.py             - A python script used to train the model on CPI dataset (Human).
+          ├── test_for_DTA.py                 - A python script that reproduces the DTA prediction results using the pre-trained models.
+          ├── test_for_CPI.py                 - A python script that reproduces the CPI prediction results using the pre-trained models.
+          ├── test_for_Ablation.py            - A python script that reproduces the ablation results using the pre-trained models. 
+          ├── grad_pre.py                     - A python script using backpropagation gradients to predict protein binding pockets.
+          ├── requirements.txt                - A txt file recording the python packages that model depend on to run.
+          ├── Dockerfile                      - A file used to build the environment image via Docker.
+          └── experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
+   
       ```
 * ### Data preparation
       There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
