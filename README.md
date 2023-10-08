@@ -30,7 +30,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
    pip install -r requirements.txt \
    && pip install torch-scatter==2.0.6 -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html \
    && pip install torch-sparse==0.6.9 -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html \
-   && pip install torch_spline_conv==1.2.1 -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
+   && pip install torch-spline-conv==1.2.1 -f https://pytorch-geometric.com/whl/torch-1.8.0+cu111.html
    ```
    
    :bulb: Note that the operating system we used is `ubuntu 22.04` and the version of Anaconda is `23.3.1`.
