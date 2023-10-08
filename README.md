@@ -1,6 +1,3 @@
-
-# Under Construction...
-
 # HiSIF-DTA
 A repo for "HiSIF-DTA: A Hierarchical Semantic Information Fusion Framework for Drug-Target Affinity Prediction".
 
