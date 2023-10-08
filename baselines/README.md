@@ -18,9 +18,11 @@ To demonstrate the superiority of the proposed model, we conduct experiments to 
 - **TransformerCPI\***: TransformerCPI regards protein sequences or drug SMILES strings as sentences and considers residues or atoms as words. It proposes a CPI prediction method based on the Transformer architecture, which encodes and decodes interactions between compounds and proteins, achieving accurate predictions.
 
 ## Re-training
-To avoid any potential inconsistence when comparing these methods, we re-trained all baseline models with strictly the identical experimental setting to our model. Besides, we adopted the optimal parameters as reported in their papers. In this directory, we have provided the relevant code used for retraining these models, as well as the saved model parameters. Please refer to the `CPI` and `DTA` directories for more information. 
+To avoid any potential inconsistence when comparing these methods, we re-trained all baseline models with strictly the identical experimental setting to our model. Besides, we adopted the optimal parameters as reported in their papers. In this directory, we have provided the relevant code used for retraining these models, as well as the saved model parameters. Please refer to the `CPI` and `DTA` directories for more information.
 
-💡 Note that due to the unavailability of the relevant training codes for some traditional baseline methods, such as KronLS and SimBoost, we did not re-train them and kept the original results reported in their source papers.
+💡 Due to restrictions on upload file size, some of the data could not be uploaded. The complete `baselines` file can be obtained via the following link:.........
+
+💡 In addition, due to the unavailability of the relevant training codes for some traditional baseline methods, such as KronLS and SimBoost, we did not re-train them and kept the original results reported in their source papers.
 ## Results
 The model performance of these models can be found in `experimental_results.ipynb` in the upper-level directory.
 
