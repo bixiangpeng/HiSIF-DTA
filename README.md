@@ -2,11 +2,11 @@
 # Under Construction...
 
 # HiSIF-DTA
-A repo for "HiSIF-DTA: A Universal Hierarchical Semantic Information Fusion Framework for Drug-Target Affinity Prediction".
+A repo for "HiSIF-DTA: A Hierarchical Semantic Information Fusion Framework for Drug-Target Affinity Prediction".
 
 Exploring appropriate protein representation methods and improving protein information abundance is a critical step in enhancing the accuracy of DTA prediction. Recently, numerous deep learning-based models have been proposed to utilize **sequential** or **structural** features of target proteins.
 
-However, these models capture only **_low-order semantics_** that exists in a single protein, while the **_high-order semantics_** abundant in biological networks are largely ignored. In this article, we propose **HiSIF-DTA—a universal hierarchical semantic information fusion framework for DTA prediction**. 
+However, these models capture only **_low-order semantics_** that exists in a single protein, while the **_high-order semantics_** abundant in biological networks are largely ignored. In this article, we propose **HiSIF-DTA—a hierarchical semantic information fusion framework for DTA prediction**. 
 
 In this framework, a hierarchical protein graph is constructed that includes not only contact map as **_low-order structural semantics_** but also protein-protein interaction network (PPI) as **_high-order functional semantics_**. Particularly, two distinct hierarchical fusion strategies (i.e., **_Top-down_** and **_Bottom-Up_**) are designed to integrate the different protein semantics, therefore contributing to a richer protein representation. **Comprehensive experimental results demonstrate that HiSIF-DTA outperforms current state-of-the-art methods for prediction on the benchmark datasets of DTA task**.
 
