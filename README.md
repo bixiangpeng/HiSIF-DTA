@@ -53,24 +53,30 @@ In this framework, a hierarchical protein graph is constructed that includes not
 * ### Contents page
    ```text
        >  HiSIF-DTA
+          ├── baselines                       - Baseline models directory. All the baseline models we re-trained can be found in this directory.
           ├── data                           - Data directory. The detailed information can be found in next section.
-          ├──models                          - Model directory.
-          │   ├── HGCN.py                    - Original model file, which includes both Top-Down (TDNet) and Bottom-Up(BUNet) semantic fusion models. 
-          │   └── HGCN_for_CPI.py            - A model modified for datasets with large numbers of proteins.
-          ├──results                         - The reslut directory storing the experimental results and pre-trained models.
-          │   └── davis / kiba / Human       - Dataset directory.
+          ├── models                          
+          │   ├── HGCN.py                    - Original model file, which includes both Top-Down (TDNet) and Bottom-Up(BUNet) semantic fusion models.
+          │   ├── HGCN_for_CPI.py            - A model modified for datasets (Human) with large numbers of proteins.
+          │   └── HGCN_for_Ablation.py       - Three ablation variants we used in this study.
+          ├── results                         - The reslut directory storing the experimental results and pre-trained models.
+          │   └── davis / kiba / Human      
           │       ├── pretrained_BUNet.csv   - A CSV file recording the optimal predicting results of BUNet on davis/kiba/Human. 
           │       ├── pretrained_BUNet.model - A file recording the optimal model parameters of BUNet on davis/kiba/Human.
           │       ├── pretrained_TDNet.csv
           │       └── pretrained_TDNet.model
-          ├──create_data.py                  - A python file converting original data to the input data that model needed.
-          ├──utils.py                        - A python file recording the various tools needed for training, including dataset classes, gradient solving classes, evaluation metrics, etc.
-          ├──train_for_DTA.py                - A python file used to train the model on DTA dataset (davis or kiba).
-          ├──train_for_CPI.py                - A python file used to train the model on CPI dataset (Human).
-          ├──inference.py                    - A python file that reproduces the optimal experimental results using the pre-trained models. 
-          ├──grad_pre.py                     - A python file using backpropagation gradients to predict protein binding pockets.
+          ├──generate_contact_map.py         - A Python script used to generate the contact map based on PDB files.
+          ├──create_data.py                  - A python script used to convert original data to the input data that model needed.
+          ├──utils.py                        - A python script recording the various tools needed for training, including dataset classes, gradient solving classes, evaluation metrics, etc.
+          ├──training_for_DTA.py             - A python script used to train the model on DTA dataset (davis or kiba).
+          ├──training_for_CPI.py             - A python script used to train the model on CPI dataset (Human).
+          ├──test_for_DTA.py                 - A python script that reproduces the DTA prediction results using the pre-trained models.
+          ├──test_for_CPI.py                 - A python script that reproduces the CPI prediction results using the pre-trained models.
+          ├──test_for_Ablation.py            - A python script that reproduces the ablation results using the pre-trained models. 
+          ├──grad_pre.py                     - A python script using backpropagation gradients to predict protein binding pockets.
           ├──requirements.txt                - A txt file recording the python packages that model depend on to run.
-          └──Dockerfile                      - A file used to build the environment image via Docker.
+          ├──Dockerfile                      - A file used to build the environment image via Docker.
+          └──experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
       ```
 * ### Data preparation
       There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
