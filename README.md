@@ -187,7 +187,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
    python test_for_DTA.py --model TDNet --dataset davis  or
    python test_for_CPI.py --model BUNet --dataset Human
    ```
-   :bulb: Please note that before making predictions, in addition to placing the pre-trained model parameter files in the correct location, it is also necessary to place the required data files mentioned in the previous section in the appropriate location.
+   :bulb: Note that before making predictions, in addition to placing the pre-trained model parameter files in the correct location, it is also necessary to place the required data files mentioned in the previous section in the appropriate location.
 ## Results
 ---
 * ### Experimental results
@@ -218,6 +218,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
       | __TDNet__ (Top-Down) |  0.988 | 0.945 | 0.952 |
       | __BUNet__ (Bottom-Up)|  0.986 | 0.947 | 0.947|
 
+   💡 The performance of baseline models can be found in `experimental_results.ipynb`.
    
 * ### Reproduce the results with singal command
    To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this function with the following simple command：
