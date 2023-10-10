@@ -26,6 +26,47 @@ To avoid any potential inconsistence when comparing these methods, we re-trained
 ## Results
 The model performance of these models can be found in `experimental_results.ipynb` in the upper-level directory.
 
+<table>
+    <tr>
+        <th rowspan='2'>Method</th> <th colspan='3'>Human</th>
+    </tr>
+    <tr>
+        <th>AUROC</th><th>Precision</th><th>Recall</th>
+    </tr>
+    <tr>
+        <th>K-NN</th><td>0.860</td><td>0.927</td><td>0.798</td>
+    </tr>
+    <tr>
+        <th>L2</th><td>0.911</td><td>0.913</td><td>0.867</td>
+    </tr>
+    <tr>
+        <th>RF</th><td>0.940</td><td>0.897</td><td>0.861</td>
+    </tr>
+    <tr>
+        <th>GCN</th><td>0.956</td><td>0.862</td><td>0.928</td>
+    </tr>
+    <tr>
+        <th>CPI-GNN*</th><td>0.965</td><td>0.919</td><td>0.912</td>
+    </tr>
+    <tr>
+        <th>DrugVQA (seq)*</th><td>0.966</td><td>0.921</td><td>0.914</td>
+    </tr>
+    <tr>
+        <th>TransformerCPI*</th><td>0.974</td><td>0.914</td><td>0.923</td>
+    </tr>
+    <tr>
+        <th>GraphDTA*</th><td>0.975</td><td>0.930</td><td>0.917</td>
+    </tr>
+    <tr>
+        <th>Ours(Top-Down)*</th><th>0.988</th><td>0.945</td><th>0.952</th>
+    </tr>
+    <tr>
+        <th>Ours(Bottom-Up)*</th><td>0.986</td><th>0.947</th><td>0.947</td>
+    </tr>
+</table>
+
+
+
 ## Forked repos
 
 Below are the repository links for the relevant baseline models. Our training code is based on these source codes with slight modifications.
