@@ -14,7 +14,7 @@ A repo for "HiSIF-DTA: A Hierarchical Semantic Information Fusion Framework for 
    * [Project structure](#project-structure)
    * [Data preparation](#data-preparation)
    * [Training](#training)
-   * [Predicting](#predicting)
+   * [Pretrained models](#pretrained-models)
 * [Results](#results)
    * [Experimental results](#experimental-results)
    * [Reproduce the results with single command](#reproduce-the-results-with-single-command)
@@ -197,7 +197,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
   
    🌳 Additionally, due to the larger scale of proteins in the Human dataset, we have made modifications to the original architecture to alleviate the memory requirements. For detailed changes, please refer to the file  `HGCN_for_CPI.py`.
 
-* ### Predicting
+* ### Pretrained models
    If you don't want to re-train the model, we provide pre-trained model parameters as shown below. You can download these model parameter files and place them in the "results/dataset_name/" directory.
 <a name="pretrained-models"></a>
 
