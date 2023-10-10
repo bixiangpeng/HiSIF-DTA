@@ -218,7 +218,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
       | __TDNet__ (Top-Down) |  0.988 | 0.945 | 0.952 |
       | __BUNet__ (Bottom-Up)|  0.986 | 0.947 | 0.947|
 
-   💡 The performance of baseline models can be found in `experimental_results.ipynb`.
+   💡 The performance of baseline models can be found in `experimental_results.ipynb` or `baselines` directory.
    
 * ### Reproduce the results with singal command
    To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this function with the following simple command：
