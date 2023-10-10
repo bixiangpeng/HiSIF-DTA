@@ -81,10 +81,11 @@ In this framework, a hierarchical protein graph is constructed that includes not
 
    1. __Download processed data__
    
-      The data file (`data.zip`) of these three datasets can be downloaded from this [link](https://drive.google.com/file/d/13FzDDY1edFXRtJy7VEik8EZ2xMG5jbsk/view?usp=drive_link). Uncompress this file to get a 'data' folder containing all the original data and processed data. 
-      Replacing the original 'data' folder by this new folder and then you can re-train or test our proposed model on Davis, KIBA or Human.  
+      The data file (`data.zip`) of these three datasets can be downloaded from this [link](https://drive.google.com/file/d/13FzDDY1edFXRtJy7VEik8EZ2xMG5jbsk/view?usp=drive_link). Uncompress this file to get a 'data' folder containing all the original data and processed data.
       
-      For clarity, the content architecture of `data` directory is described as follows:
+      ☑️ Replacing the original 'data' folder by this new folder and then you can re-train or test our proposed model on Davis, KIBA or Human.  
+      
+      🌳 For clarity, the content architecture of `data` directory is described as follows:
       
       ```text
        >  data
@@ -117,7 +118,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
               ├── mol_data.pkl
               └── pro_data.pkl
       ```
-   2. __Customize your data__
+   3. __Customize your data__
 
       You might like to test the model on more DTA or CPI datasets. If this is the case, please add your data in the folder 'data' and process them to be suitable for our model. We provide a detailed processing script for converting original data to the input data that our model needed, i.e., `create_data.py`. The processing steps are as follows:
      
