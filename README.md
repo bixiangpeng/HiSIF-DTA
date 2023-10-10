@@ -239,7 +239,29 @@ In this framework, a hierarchical protein graph is constructed that includes not
    2. cd /media/HiSIF-DTA
    3. python training_for_DTA.py --dataset davis --model TDNet
    ```
-   
+## Baseline models
+---
+To demonstrate the superiority of the proposed model, we conduct experiments to compare our approach with the following state-of-the-art (SOTA) models:
+
+**DTA:**
+- **DeepDTA** : [Repo Link ](https://github.com/hkmztrk/DeepDTA)
+- **AttentionDTA** : [Repo Link ](https://github.com/zhaoqichang/AttentionDTA_BIBM)
+- **GraphDTA** : [Repo Link ](https://github.com/thinng/GraphDTA)
+- **MGraphDTA** : [Repo Link ](https://github.com/guaguabujianle/MGraphDTA)
+- **DGraphDTA** : [Repo Link ](https://github.com/595693085/DGraphDTA)
+
+**CPI:**
+- **DrugVQA (seq)** : [Repo Link ](https://github.com/prokia/drugVQA)
+- **GraphDTA** : [Repo Link ](https://github.com/thinng/GraphDTA)
+- **CPI-GNN** : [Repo Link ](https://github.com/masashitsubaki/CPI_prediction)
+- **TransformerCPI** : [Repo Link ](https://github.com/lifanchen-simm/transformerCPI)
+
+🌳 The above link is the GitHub link to the baseline models. To ensure a fair comparison, we re-trained these baseline models with the same experimental setup as our proposed model. The detailed re-training codes and results can be found in the `baseline` directory.
+
+## NoteBooks
+
+To ensure the transparency of experimental results, the prediction results of all models (including our proposed model and baseline models) have been uploaded to Zenodo (Link). Additionally, in order to present the experimental results in a more intuitive way, we provide a comprehensive Jupyter notebook in our repo (`experimental_results.ipynb`), where we load all prediction result files and recalculate the experimental metrics based on these results, presenting them in the form of statistical charts or tables.
+
 ## Contact
 ---
 We welcome you to contact us (email: bixiangpeng@stu.ouc.edu.cn) for any questions and cooperations.
