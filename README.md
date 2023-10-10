@@ -10,7 +10,7 @@ A repo for "HiSIF-DTA: A Hierarchical Semantic Information Fusion Framework for 
    * [Download projects](#download-projects)
    * [Configure the environment manually](#configure-the-environment-manually)
    * [Docker Image](#docker-image)
-* [Usage](#usage)
+* [Usages](#usages)
    * [Project structure](#project-structure)
    * [Data preparation](#data-preparation)
    * [Training](#training)
@@ -69,7 +69,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
    conda list 
    ```
   
-##  Usage
+##  Usages
 
 * ### Project structure
 
