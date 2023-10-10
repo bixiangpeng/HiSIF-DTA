@@ -24,9 +24,47 @@ To avoid any potential inconsistence when comparing these methods, we re-trained
 
 💡 In addition, due to the unavailability of the relevant training codes for some traditional baseline methods, such as KronLS and SimBoost, we did not re-train them and kept the original results reported in their source papers.
 ## Results
-The model performance of these models can be found in `experimental_results.ipynb` in the upper-level directory.
+The model performance of these models can also be found in `experimental_results.ipynb` in the upper-level directory.
 
-<table>
+**DTA:**
+<table border= '1'  height='300px'>
+    <tr>
+        <th rowspan='2'>Method</th> <th colspan='2'>Davis</th> <th colspan='2'>KIBA</th>
+    </tr>
+    <tr>
+        <th>MSE</th><th>CI</th><th>MSE</th><th>CI</th>
+    </tr>
+    <tr>
+        <th>KronRLS</th><td>0.379</td><td>0.871</td><td>0.411</td><td>0.782</td>
+    </tr>
+    <tr>
+        <th>SimBoost</th><td>0.282</td><td>0.872</td><td>0.222</td><td>0.836</td>
+    </tr>
+    <tr>
+        <th>DeepDTA*</th><td>0.253</td><td>0.879</td><td>0.187</td><td>0.854</td>
+    </tr>
+    <tr>
+        <th>AttentionDTA*</th><td>0.244</td><td>0.885</td><td>0.175</td><td>0.867</td>
+    </tr>
+    <tr>
+        <th>GraphDTA*</th><td>0.230</td><td>0.885</td><td>0.146</td><td>0.885</td>
+    </tr>
+    <tr>
+        <th>MGraphDTA*</th><td>0.207</td><td>0.895</td><td>0.128</td><td>0.902</td>
+    </tr>
+    <tr>
+        <th>DGraphDTA*</th><td>0.202</td><td>0.905</td><td>0.127</td><td>0.902</td>
+    </tr>
+    <tr>
+        <th>Ours(Top-Down)</th><th>0.193</th><td>0.907</td><th>0.120</th><td>0.904</td>
+    </tr>
+    <tr>
+        <th>Ours(Bottom-Up)</th><td>0.191</td><th>0.906</th><td>0.121</td><th>0.904</th>
+    </tr>
+</table>
+
+**CPI:**
+<table border= '1'  height='300px'>
     <tr>
         <th rowspan='2'>Method</th> <th colspan='3'>Human</th>
     </tr>
@@ -58,13 +96,14 @@ The model performance of these models can be found in `experimental_results.ipyn
         <th>GraphDTA*</th><td>0.975</td><td>0.930</td><td>0.917</td>
     </tr>
     <tr>
-        <th>Ours(Top-Down)*</th><th>0.988</th><td>0.945</td><th>0.952</th>
+        <th>Ours(Top-Down)</th><th>0.988</th><td>0.945</td><th>0.952</th>
     </tr>
     <tr>
-        <th>Ours(Bottom-Up)*</th><td>0.986</td><th>0.947</th><td>0.947</td>
+        <th>Ours(Bottom-Up)</th><td>0.986</td><th>0.947</th><td>0.947</td>
     </tr>
 </table>
 
+💡 Methods with an asterisk (*) indicate that they have been re-trained.
 
 
 ## Forked repos
