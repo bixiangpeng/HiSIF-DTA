@@ -1,5 +1,28 @@
 # HiSIF-DTA
+---
 A repo for "HiSIF-DTA: A Hierarchical Semantic Information Fusion Framework for Drug-Target Affinity Prediction".
+
+
+## Contents
+
+* [Abstracts](#abstracts)
+* [Requirements](#requirements)
+   * [Download projects](#download-projects)
+   * [Configure the environment manually](#configure-the-environment-manually)
+   * [Docker Image](#docker-image)
+* [Usage](#usage)
+   * [Project structure](#project-structure)
+   * [Data preparation](#data-preparation)
+   * [Training](#training)
+   * [Predicting](#predicting)
+* [Results](#results)
+   * [Experimental results](#experimental-results)
+   * [Reproduce the results with single command](#reproduce-the-results-with-single-command)
+* [Baseline models](#baseline-models)
+* [NoteBooks](#notebooks)
+* [Contact](#contact)
+
+## Abstracts
 
 Exploring appropriate protein representation methods and improving protein information abundance is a critical step in enhancing the accuracy of DTA prediction. Recently, numerous deep learning-based models have been proposed to utilize **sequential** or **structural** features of target proteins.
 
@@ -8,8 +31,9 @@ However, these models capture only **_low-order semantics_** that exists in a si
 In this framework, a hierarchical protein graph is constructed that includes not only contact map as **_low-order structural semantics_** but also protein-protein interaction network (PPI) as **_high-order functional semantics_**. Particularly, two distinct hierarchical fusion strategies (i.e., **_Top-down_** and **_Bottom-Up_**) are designed to integrate the different protein semantics, therefore contributing to a richer protein representation. **Comprehensive experimental results demonstrate that HiSIF-DTA outperforms current state-of-the-art methods for prediction on the benchmark datasets of DTA task**.
 
 ![HiSIF-DTA architecture](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/Framework.jpg)
+
+
 ## Requirements
----
 
 * ### Download projects
 
@@ -46,8 +70,8 @@ In this framework, a hierarchical protein graph is constructed that includes not
    ```
   
 ##  Usage
----
-* ### Contents page
+
+* ### Project structure
 
    ```text
        >  HiSIF-DTA
@@ -85,7 +109,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
       
       🌳 Replacing the original 'data' folder by this new folder and then you can re-train or test our proposed model on Davis, KIBA or Human.  
       
-      🌳 For clarity, the content architecture of `data` directory is described as follows:
+      🌳 For clarity, the file architecture of `data` directory is described as follows:
       
       ```text
        >  data
@@ -189,8 +213,9 @@ In this framework, a hierarchical protein graph is constructed that includes not
    python test_for_CPI.py --model BUNet --dataset Human
    ```
    :bulb: Note that before making predictions, in addition to placing the pre-trained model parameter files in the correct location, it is also necessary to place the required data files mentioned in the previous section in the appropriate location.
+  
 ## Results
----
+
 * ### Experimental results
 
   We have designed a protein semantic information fusion framework based on the concept of hierarchical graph to enhance the richness of protein representation. Meanwhile, we propose two different strategies for semantic information fusion (_Top-Down_ and _Bottom-Up_) and evaluate their performance on different datasets. The performance of two different strategies on different datasets is as follows:
@@ -240,7 +265,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
    3. python training_for_DTA.py --dataset davis --model TDNet
    ```
 ## Baseline models
----
+
 To demonstrate the superiority of the proposed model, we conduct experiments to compare our approach with the following state-of-the-art (SOTA) models:
 
 **DTA:**
@@ -263,5 +288,5 @@ To demonstrate the superiority of the proposed model, we conduct experiments to 
 To ensure the transparency of experimental results, the prediction results of all models (including our proposed model and baseline models) have been uploaded to Zenodo ([Link](https://zenodo.org/record/8385073)). Additionally, in order to present the experimental results in a more intuitive way, we provide a comprehensive Jupyter notebook in our repo ([`experimental_results.ipynb`](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/experimental_results.ipynb)), where we load all prediction result files and recalculate the experimental metrics based on these results, presenting them in the form of statistical charts or tables.
 
 ## Contact
----
+
 We welcome you to contact us (email: bixiangpeng@stu.ouc.edu.cn) for any questions and cooperations.
