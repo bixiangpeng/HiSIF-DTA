@@ -83,7 +83,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
    
       The data file (`data.zip`) of these three datasets can be downloaded from this [link](https://drive.google.com/file/d/13FzDDY1edFXRtJy7VEik8EZ2xMG5jbsk/view?usp=drive_link). Uncompress this file to get a 'data' folder containing all the original data and processed data.
       
-      ☑️ Replacing the original 'data' folder by this new folder and then you can re-train or test our proposed model on Davis, KIBA or Human.  
+      🌳 Replacing the original 'data' folder by this new folder and then you can re-train or test our proposed model on Davis, KIBA or Human.  
       
       🌳 For clarity, the content architecture of `data` directory is described as follows:
       
@@ -169,9 +169,9 @@ In this framework, a hierarchical protein graph is constructed that includes not
       --num_workers: This parameter is an optional value in the Dataloader, and when its value is greater than 0, it enables 
        multiprocessing for data processing.
    ```
-   :bulb: We provided an additional training file (`training_for_CPI.py`) specifically for conducting five-fold cross-training on the Human dataset.
+   🌳 We provided an additional training file (`training_for_CPI.py`) specifically for conducting five-fold cross-training on the Human dataset.
   
-   :bulb: Additionally, due to the larger scale of proteins in the Human dataset, we have made modifications to the original architecture to alleviate the memory requirements. For detailed changes, please refer to the file  `HGCN_for_CPI.py`.
+   🌳 Additionally, due to the larger scale of proteins in the Human dataset, we have made modifications to the original architecture to alleviate the memory requirements. For detailed changes, please refer to the file  `HGCN_for_CPI.py`.
 
 * ### Predicting
    If you don't want to re-train the model, we provide pre-trained model parameters as shown below. You can download these model parameter files and place them in the "results/dataset_name/" directory.
@@ -219,7 +219,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
       | __TDNet__ (Top-Down) |  0.988 | 0.945 | 0.952 |
       | __BUNet__ (Bottom-Up)|  0.986 | 0.947 | 0.947|
 
-   💡 The performance of baseline models can be found in `experimental_results.ipynb` or `baselines` directory.
+   🌳 The performance of baseline models can be found in `experimental_results.ipynb` or `baselines` directory.
    
 * ### Reproduce the results with single command
    To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this function with the following simple command：
