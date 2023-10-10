@@ -77,12 +77,12 @@ In this framework, a hierarchical protein graph is constructed that includes not
           └── experimental_results.ipynb      - A notebook indicating the prediction results of our models and other baseline models.
    ```
 * ### Data preparation
-  There are three benchmark datasets were adopted in this project, including two DTA datasets (`davis and kiba`) and a CPI dataset (`Human`).
+  There are three benchmark datasets were adopted in this project, including two DTA datasets (`Davis and KIBA`) and a CPI dataset (`Human`).
 
    1. __Download processed data__
    
       The data file (`data.zip`) of these three datasets can be downloaded from this [link](https://drive.google.com/file/d/13FzDDY1edFXRtJy7VEik8EZ2xMG5jbsk/view?usp=drive_link). Uncompress this file to get a 'data' folder containing all the original data and processed data. 
-      Replace the original 'data' folder by this new folder.
+      Replacing the original 'data' folder by this new folder and then you can re-train or test our proposed model on Davis, KIBA or Human.  
       
       For clarity, the content architecture of `data` directory is described as follows:
       
@@ -220,7 +220,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
 
    💡 The performance of baseline models can be found in `experimental_results.ipynb` or `baselines` directory.
    
-* ### Reproduce the results with singal command
+* ### Reproduce the results with single command
    To facilitate the reproducibility of our experimental results, we have provided a Docker Image-based solution that allows for reproducing our experimental results on multiple datasets with just a single command. You can easily experience this function with the following simple command：
   ```text
   sudo docker run --name hisif-con --gpus all --shm-size=2g -v /your/local/path/HiSIF-DTA/:/media/HiSIF-DTA -it hisif-image:v1
