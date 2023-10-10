@@ -260,7 +260,7 @@ To demonstrate the superiority of the proposed model, we conduct experiments to 
 
 ## NoteBooks
 
-To ensure the transparency of experimental results, the prediction results of all models (including our proposed model and baseline models) have been uploaded to Zenodo ([Link](https://zenodo.org/record/8385073)). Additionally, in order to present the experimental results in a more intuitive way, we provide a comprehensive Jupyter notebook in our repo (`experimental_results.ipynb`), where we load all prediction result files and recalculate the experimental metrics based on these results, presenting them in the form of statistical charts or tables.
+To ensure the transparency of experimental results, the prediction results of all models (including our proposed model and baseline models) have been uploaded to Zenodo ([Link](https://zenodo.org/record/8385073)). Additionally, in order to present the experimental results in a more intuitive way, we provide a comprehensive Jupyter notebook in our repo ([`experimental_results.ipynb`](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/experimental_results.ipynb)), where we load all prediction result files and recalculate the experimental metrics based on these results, presenting them in the form of statistical charts or tables.
 
 ## Contact
 ---
