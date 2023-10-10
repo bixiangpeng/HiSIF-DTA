@@ -256,11 +256,11 @@ To demonstrate the superiority of the proposed model, we conduct experiments to 
 - **CPI-GNN** : [Repo Link ](https://github.com/masashitsubaki/CPI_prediction)
 - **TransformerCPI** : [Repo Link ](https://github.com/lifanchen-simm/transformerCPI)
 
-🌳 The above link is the GitHub link to the baseline models. To ensure a fair comparison, we re-trained these baseline models with the same experimental setup as our proposed model. The detailed re-training codes and results can be found in the `baseline` directory.
+🌳 The above link is the GitHub link to the baseline models. To ensure a fair comparison, we re-trained these baseline models with the same experimental setup as our proposed model. The detailed re-training codes and results can be found in the `baselines` directory.
 
 ## NoteBooks
 
-To ensure the transparency of experimental results, the prediction results of all models (including our proposed model and baseline models) have been uploaded to Zenodo (Link). Additionally, in order to present the experimental results in a more intuitive way, we provide a comprehensive Jupyter notebook in our repo (`experimental_results.ipynb`), where we load all prediction result files and recalculate the experimental metrics based on these results, presenting them in the form of statistical charts or tables.
+To ensure the transparency of experimental results, the prediction results of all models (including our proposed model and baseline models) have been uploaded to Zenodo ([Link](https://zenodo.org/record/8385073)). Additionally, in order to present the experimental results in a more intuitive way, we provide a comprehensive Jupyter notebook in our repo (`experimental_results.ipynb`), where we load all prediction result files and recalculate the experimental metrics based on these results, presenting them in the form of statistical charts or tables.
 
 ## Contact
 ---
