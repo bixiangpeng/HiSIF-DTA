@@ -81,7 +81,7 @@ In this framework, a hierarchical protein graph is constructed that includes not
 
    1. __Download processed data__
    
-      The data file (`data.zip`) of these three datasets can be downloaded from this [link](https://drive.google.com/drive/folders/1pOBuR1Cu5bychyApZQCpKFNFUMQU18ih?usp=drive_link). Uncompress this file to get a 'data' folder containing all the original data and processed data. 
+      The data file (`data.zip`) of these three datasets can be downloaded from this [link](https://drive.google.com/file/d/13FzDDY1edFXRtJy7VEik8EZ2xMG5jbsk/view?usp=drive_link). Uncompress this file to get a 'data' folder containing all the original data and processed data. 
       Replace the original 'data' folder by this new folder.
       
       For clarity, the content architecture of `data` directory is described as follows:
