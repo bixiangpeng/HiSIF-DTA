@@ -203,11 +203,11 @@ In this framework, a hierarchical protein graph is constructed that includes not
 
    | Datasets | Pre-trained models          | Description |
    |:-----------:|:-----------------------------:|:--------------|
-   | Davis    | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/davis/pretrained_BUNet.model) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/davis/pretrained_TDNet.model)       | Pretrained model parameters on Davis. |
-   | KIBA     | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/kiba/pretrained_BUNet.model) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/kiba/pretrained_TDNet.model)          | Pretrained model parameters on KIBA. |
+   | Davis    | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/davis/pretrained_BUNet.model) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/davis/pretrained_TDNet.model)       | The pretrained model parameters on the Davis. |
+   | KIBA     | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/kiba/pretrained_BUNet.model) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/kiba/pretrained_TDNet.model)          | The Pretrained model parameters on the KIBA. |
    | Human    | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/tree/main/results/Human) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/tree/main/results/Human)          | The pretrained model parameters on the Human five-fold dataset. |
   
-   After that, you can perform DTA predictions by running the following command:
+   Based on these pre-trained models, you can perform DTA predictions by simply running the following command:
    ```text 
    python test_for_DTA.py --model TDNet --dataset davis  or
    python test_for_CPI.py --model BUNet --dataset Human
