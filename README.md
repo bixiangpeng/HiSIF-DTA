@@ -198,14 +198,14 @@ In this framework, a hierarchical protein graph is constructed that includes not
    🌳 Additionally, due to the larger scale of proteins in the Human dataset, we have made modifications to the original architecture to alleviate the memory requirements. For detailed changes, please refer to the file  `HGCN_for_CPI.py`.
 
 * ### Pretrained models
-   If you don't want to re-train the model, we provide pre-trained model parameters as shown below. You can download these model parameter files and place them in the "results/dataset_name/" directory.
+   If you don't want to re-train the model, we provide pre-trained model parameters as shown below. 
 <a name="pretrained-models"></a>
 
    | Datasets | Pre-trained models          | Description |
    |:-----------:|:-----------------------------:|:--------------|
-   | davis    | [HiSIF<sub>BUNet</sub>](https://) &nbsp; , &nbsp; [HiSIF<sub>TDNet</sub>](https://)       | SOTA general-purpose protein language model. |
-   | kiba     | [HiSIF<sub>BUNet</sub>](https://) &nbsp; , &nbsp; [HiSIF<sub>TDNet</sub>](https://)          | End-to-end single sequence 3D structure predictor (Nov 2022 update). |
-   | Human    | [HiSIF<sub>BUNet</sub>](https://) &nbsp; , &nbsp; [HiSIF<sub>TDNet</sub>](https://)          | End-to-end single sequence 3D structure predictor (Nov 2022 update). |
+   | Davis    | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/davis/pretrained_BUNet.model) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/davis/pretrained_TDNet.model)       | Pretrained model parameters on Davis. |
+   | KIBA     | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/kiba/pretrained_BUNet.model) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/blob/main/results/kiba/pretrained_TDNet.model)          | Pretrained model parameters on KIBA. |
+   | Human    | [BUNet](https://github.com/bixiangpeng/HiSIF-DTA/tree/main/results/Human) &nbsp; , &nbsp; [TDNet](https://github.com/bixiangpeng/HiSIF-DTA/tree/main/results/Human)          | The pretrained model parameters on the Human five-fold dataset. |
   
    After that, you can perform DTA predictions by running the following command:
    ```text 
